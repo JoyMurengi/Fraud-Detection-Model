@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Fraud Detection Docker Container Management Script
-# Author: ML Engineering Team
-# Date: November 2025
+
 
 set -e  # Exit on any error
 
