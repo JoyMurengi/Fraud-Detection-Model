@@ -10,6 +10,32 @@ A production-style fraud detection pipeline built on the [IEEE-CIS Fraud Detecti
 
 **TL;DR**: The final tuned XGBoost model catches **~68% of fraudulent transactions** while flagging only **~15.5% of legitimate transactions** for review — about **19x better than random guessing** on a dataset where fraud makes up just 3.5% of all transactions.
 
+Raw Data
+     │
+     ▼
+EDA
+     │
+     ▼
+Feature Engineering
+     │
+     ▼
+Model Comparison
+     │
+     ▼
+Hyperparameter Tuning
+     │
+     ▼
+MLflow Tracking
+     │
+     ▼
+Model Registry
+     │
+     ▼
+Flask API
+     │
+     ▼
+Docker Deployment
+
 ## Table of Contents
 - [Dataset](#dataset)
 - [Getting Started](#getting-started)
@@ -44,7 +70,7 @@ cd Fraud-Detection-Model
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 # Download the Kaggle data into ./data/ (see Dataset section above)
-jupyter notebook notebooks/eda.ipynb
+jupyter notebook note_books/eda.ipynb
 
 # --- Option B: Run the deployed API via Docker ---
 ./run_docker.sh
