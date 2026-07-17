@@ -81,7 +81,7 @@ Once running, the API exposes `/health`, `/predict`, `/predict/batch`, `/model-i
 
 ## 1. Exploratory Data Analysis
 
-Notebook: [`notebooks/01_fraud_detection_eda.ipynb`](notebooks/01_fraud_detection_eda.ipynb)
+Notebook: [`note_books/eda.ipynb`](note_books/eda.ipynb)
 
 Key findings that shaped the modeling strategy:
 
@@ -94,7 +94,7 @@ Output: a cleaned, reduced feature set with zero missing values after median/mod
 
 ## 2. Modeling
 
-Notebook: [`notebooks/02_fraud_detection_modeling.ipynb`](notebooks/02_fraud_detection_modeling.ipynb)
+Notebook: [`note_books/modeling.ipynb`](note_books/fraud_modeling.ipynb)
 
 ### Preprocessing
 - Reduced 434 → 43 features (90% reduction) based on missingness thresholds, correlation, and business relevance.
@@ -176,4 +176,4 @@ Being upfront about trade-offs and gaps, rather than glossing over them:
 
 ## Contact
 
-Built by [Tumaini](https://github.com/TumainiC). Questions or feedback welcome via GitHub issues.
+Built by [J0Y ](https://github.com/JoyMurengi). Questions or feedback welcome via GitHub issues.
