@@ -4,8 +4,7 @@ Fraud Detection Model API
 A production-ready Flask application for serving fraud detection predictions.
 Provides REST API endpoints for real-time transaction scoring.
 
-Author: ML Engineering Team
-Date: November 2025
+
 """
 
 import os
