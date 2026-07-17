@@ -1,0 +1,6 @@
+# Ignore large files
+data/
+notebooks/.ipynb_checkpoints
+mlruns/
+models/
+

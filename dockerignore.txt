@@ -1,0 +1,56 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Git files
+.git/
+.gitignore
+
+# MLflow artifacts (use remote tracking)
+mlruns/
+
+# Data files (use external data sources)
+data/
+*.csv
+
+# Documentation
+*.md
+docs/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+tmp/
+
+# Test files
+tests/
+pytest_cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
