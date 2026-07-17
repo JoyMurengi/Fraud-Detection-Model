@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   # Fraud detection model API
+  
   fraud-detection:
     build:
       context: .
