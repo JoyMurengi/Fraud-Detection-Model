@@ -1,0 +1,102 @@
+{
+  "model_info": {
+    "name": "fraud-detection-model",
+    "version": "1.0.0",
+    "algorithm": "XGBoost",
+    "framework": "xgboost",
+    "training_date": "2025-11-11T09:32:06.508427",
+    "description": "Fraud detection model trained on IEEE-CIS dataset with hyperparameter optimization"
+  },
+  "hyperparameters": {
+    "subsample": 0.9,
+    "scale_pos_weight": 27.580278281911674,
+    "n_estimators": 200,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "colsample_bytree": 0.9
+  },
+  "performance_metrics": {
+    "pr_auc": 0.34943239500637246,
+    "roc_auc": 0.7863623082623413,
+    "baseline_pr_auc": 0.33556739959115756,
+    "improvement_percent": 4.131806436533303
+  },
+  "features": {
+    "feature_names": [
+      "V50",
+      "card6_debit",
+      "V58",
+      "ProductCD_W",
+      "V18",
+      "V92",
+      "V87",
+      "V44",
+      "V15",
+      "ProductCD_H",
+      "V94",
+      "card6_charge card",
+      "V34",
+      "V51",
+      "V52",
+      "V38",
+      "card6_debit or credit",
+      "card6_credit",
+      "card4_american express",
+      "V33",
+      "card3",
+      "V37",
+      "V80",
+      "V40",
+      "ProductCD_R",
+      "V39",
+      "V79",
+      "V86",
+      "V17",
+      "V93",
+      "V16",
+      "V73",
+      "V42",
+      "card4_discover",
+      "ProductCD_S",
+      "V85",
+      "V74",
+      "ProductCD_C",
+      "card4_mastercard",
+      "V43",
+      "card4_visa",
+      "V45",
+      "V81"
+    ],
+    "feature_count": 43,
+    "top_features": [
+      "V50",
+      "card6_debit",
+      "V58",
+      "ProductCD_W",
+      "V18",
+      "V92",
+      "V87",
+      "V44",
+      "V15",
+      "ProductCD_H"
+    ]
+  },
+  "preprocessing": {
+    "original_features": 434,
+    "final_features": 43,
+    "reduction_percentage": 90.09216589861751,
+    "missing_value_strategy": "median_for_numeric_mode_for_categorical"
+  },
+  "deployment": {
+    "input_format": "pandas_dataframe",
+    "output_format": "probability_and_binary_prediction",
+    "threshold_recommendation": 0.5,
+    "business_threshold_notes": "Consider optimizing threshold based on business cost-benefit analysis"
+  },
+  "model_artifacts": {
+    "model_file": "fraud_detection_model.pkl",
+    "preprocessing_function": "preprocessing_function.py",
+    "feature_names": "feature_names.pkl",
+    "inference_script": "predict.py"
+  }
+}
