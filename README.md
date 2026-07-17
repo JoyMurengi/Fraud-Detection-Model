@@ -12,7 +12,6 @@ A production-style fraud detection pipeline built on the [IEEE-CIS Fraud Detecti
 
 ## Table of Contents
 - [Dataset](#dataset)
-- [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [1. Exploratory Data Analysis](#1-exploratory-data-analysis)
 - [2. Modeling](#2-modeling)
@@ -34,40 +33,18 @@ A production-style fraud detection pipeline built on the [IEEE-CIS Fraud Detecti
 
 Raw CSVs are not tracked in this repo (size + Kaggle licensing terms). Download `train_transaction.csv`, `train_identity.csv`, `test_transaction.csv`, `test_identity.csv` from the [competition page](https://www.kaggle.com/c/ieee-fraud-detection/data) and place them in a local `data/` folder before running the notebooks.
 
-## Project Structure
-
-```
-├── notebooks/
-│   ├── 01_fraud_detection_eda.ipynb          # Exploratory data analysis
-│   └── 02_fraud_detection_modeling.ipynb     # Model training, tuning, deployment prep
-├── final_model/
-│   ├── model/                                # Trained model (.pkl)
-│   ├── preprocessing/                        # Feature names, imputers
-│   ├── metadata/                             # Model card, config
-│   └── inference/                            # predict.py
-├── app.py                                    # Flask API
-├── Dockerfile
-├── docker-compose.yml
-├── run_docker.sh                             # Convenience script to build/run the container
-├── test_docker.py                            # Tests for the containerized API
-├── requirements.txt
-├── PRD.md                                    # Product requirements document
-├── .dockerignore
-└── .gitignore
-```
-
 ## Getting Started
 
 ```bash
 # Clone the repo
-git clone https://github.com/TumainiC/fraud_detection.git
-cd fraud_detection
+git clone https://github.com/JoyMurengi/Fraud-Detection-Model.git
+cd Fraud-Detection-Model
 
 # --- Option A: Run the notebooks ---
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 # Download the Kaggle data into ./data/ (see Dataset section above)
-jupyter notebook notebooks/01_fraud_detection_eda.ipynb
+jupyter notebook notebooks/eda.ipynb
 
 # --- Option B: Run the deployed API via Docker ---
 ./run_docker.sh
