@@ -10,31 +10,39 @@ A production-style fraud detection pipeline built on the [IEEE-CIS Fraud Detecti
 
 **TL;DR**: The final tuned XGBoost model catches **~68% of fraudulent transactions** while flagging only **~15.5% of legitimate transactions** for review — about **19x better than random guessing** on a dataset where fraud makes up just 3.5% of all transactions.
 
+## Business Problem
+
+Credit card fraud is rare but costly. Because fraudulent transactions account for only 3.5% of the dataset, traditional accuracy metrics are misleading. This project demonstrates how to build, evaluate, and deploy a machine learning system that prioritizes fraud detection while controlling false alarms.
+
+## Project Pipeline
+
+```text
 Raw Data
-     │
-     ▼
-EDA
-     │
-     ▼
-Feature Engineering
-     │
-     ▼
-Model Comparison
-     │
-     ▼
+    │
+    ▼
+Exploratory Data Analysis (EDA)
+    │
+    ▼
+Data Preprocessing & Feature Engineering
+    │
+    ▼
+Model Training & Comparison
+    │
+    ▼
 Hyperparameter Tuning
-     │
-     ▼
-MLflow Tracking
-     │
-     ▼
+    │
+    ▼
+MLflow Experiment Tracking
+    │
+    ▼
 Model Registry
-     │
-     ▼
-Flask API
-     │
-     ▼
-Docker Deployment
+    │
+    ▼
+Flask REST API
+    │
+    ▼
+Docker Containerization
+```
 
 ## Table of Contents
 - [Dataset](#dataset)
@@ -93,11 +101,11 @@ Key findings that shaped the modeling strategy:
 - **Categorical fraud signals**: `P_emaildomain = mail.com` (19% fraud rate vs. 3.5% average), `ProductCD = C` (11.7%), and `card4 = discover` (7.7%) all stand out as high-risk segments.
 - **Feature category ranking** (predictive strength): V-features (dominant) > D-features (moderate) > C-features (weak) > M-features (unusable due to missingness).
 
-Output: a cleaned, reduced feature set with zero missing values after median/mode imputation, refined further to 43 features in the modeling stage.
+Output: a cleaned dataset with zero missing values after median/mode imputation. Feature selection in the modeling stage further reduced the dataset from 434 to 43 features.
 
 ## 2. Modeling
 
-Notebook: [`note_books/modeling.ipynb`](note_books/fraud_modeling.ipynb)
+Notebook: [`note_books/modeling.ipynb`](note_books/modeling.ipynb)
 
 ### Preprocessing
 - Reduced 434 → 43 features (90% reduction) based on missingness thresholds, correlation, and business relevance.
